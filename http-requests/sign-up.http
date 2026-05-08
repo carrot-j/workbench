@@ -1,0 +1,2 @@
+### 워크스페이스 목록 조회
+GET http://localhost:8080/sign-up/workspaces/v1
