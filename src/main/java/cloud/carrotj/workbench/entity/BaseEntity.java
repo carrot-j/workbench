@@ -7,14 +7,15 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
+
 
 @MappedSuperclass
 public abstract class BaseEntity {
 
     @CreatedDate
     @Column(name = "created_at")
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 
     @CreatedBy
     @Column(name = "created_by")
@@ -22,7 +23,7 @@ public abstract class BaseEntity {
 
     @LastModifiedDate
     @Column(name = "updated_at")
-    private Instant updatedAt;
+    private LocalDateTime updatedAt;
 
     @LastModifiedBy
     @Column(name = "updated_by")
